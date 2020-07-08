@@ -1,0 +1,13 @@
+<script src= "https://player.twitch.tv/js/embed/v1.js"></script>
+<div id="SamplePlayerDivID"></div>
+<script type="text/javascript">
+  var options = {
+    width: 1280,
+    height: 720,
+    channel: "gameattackteam",
+    // only needed if your site is also embedded on embed.example.com and othersite.example.com 
+    parent: ["ctrestain.github.io"]
+  };
+  var player = new Twitch.Player("SamplePlayerDivID", options);
+  player.setVolume(1.0);
+</script>
