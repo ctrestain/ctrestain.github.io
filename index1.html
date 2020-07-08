@@ -1,5 +1,5 @@
 <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
-<div id="SamplePlayerDivID1" style="position:relative;padding-top:56.25%;overflow:hidden;"></div>
+<div id="SamplePlayerDivID1"></div>
 <script type="text/javascript">
   var w = window.innerWidth;
   var h = window.innerHeight;
@@ -12,10 +12,4 @@
   };
   var player1 = new Twitch.Player("SamplePlayerDivID1", options);
   player1.setVolume(1.0);
-  window.onresize=function resizeFunction(){
-		w = window.innerWidth;
-		h = window.innerHeight;
-		player1.setWidth(w);
-		player1.setHeight(h);
-	}
 </script>
