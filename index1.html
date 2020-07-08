@@ -18,4 +18,10 @@
   };
   var player1 = new Twitch.Player("SamplePlayerDivID1", options);
   player1.setVolume(1.0);
+  window.onresize=function resizeFunction(){
+  w = window.innerWidth;
+  h = window.innerHeight;
+  player1.setAttribute("width",w);
+  player1.setAttribute("height",h);
+  }
 </script>
