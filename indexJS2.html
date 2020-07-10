@@ -1,0 +1,28 @@
+<style type="text/css">
+    body {
+        overflow: hidden;
+		margin: 0;
+    }
+</style>
+<script src= "https://player.twitch.tv/js/embed/v1.js"></script>
+<div id="SamplePlayerDivID1"></div>
+<script type="text/javascript">
+  //var w = window.innerWidth;
+  //var h = window.innerHeight;
+  var options = {
+	layout: "video",
+    width: "100%",
+    height: "100%",
+    channel: "epicdemostream",
+    // only needed if your site is also embedded on embed.example.com and othersite.example.com 
+    parent: ["ctrestain.github.io"]
+  };
+  var player1 = new Twitch.Embed("SamplePlayerDivID1", options);
+  player1.setMuted(true);
+  function volChange(v){
+	player1.setVolume(v);
+  }
+  function muteVid(mute){
+	player1.setMuted(mute);
+  }
+</script>
