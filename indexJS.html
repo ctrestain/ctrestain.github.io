@@ -18,7 +18,7 @@
     parent: ["ctrestain.github.io"]
   };
   var player1 = new Twitch.Embed("SamplePlayerDivID1", options);
-  player1.setVolume(0);
+  player1.setMuted(true);
   function volChange(v){
 	player1.setVolume(v);
   }
