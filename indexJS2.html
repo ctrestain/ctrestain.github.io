@@ -14,12 +14,12 @@
     width: "100%",
     height: "100%",
     channel: "epicdemostream",
-	volume: "1",
+	volume: "1.0",
     // only needed if your site is also embedded on embed.example.com and othersite.example.com 
     parent: ["ctrestain.github.io"]
   };
   var player2 = new Twitch.Embed("SamplePlayerDivID2", options);
-  //player2.setVolume(0);
+  player2.setVolume(1.0);
   function volChange(v){
 	player2.setVolume(v);
   }
