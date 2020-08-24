@@ -21,12 +21,16 @@
   var player1 = new Twitch.Embed("SamplePlayerDivID1", options);
   player1.addEventListener(Twitch.Player.READY, vidReady);
   player1.addEventListener(Twitch.Player.PLAY, vidPlay);
+  player1.addEventListener(Twitch.Player.PLAYING, vidPlaying);
   player1.setVolume(1.0);
   function vidReady(){
 	window.vuplex.postMessage({ type: 'status', message: 'ready' });
   }
   function vidPlay(){
 	window.vuplex.postMessage({ type: 'status', message: 'play' });
+  }
+  function vidPlaying(){
+	window.vuplex.postMessage({ type: 'status', message: 'playing' });
   }
   function volChange(v){
 	player1.setVolume(v);
