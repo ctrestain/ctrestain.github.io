@@ -5,7 +5,7 @@
     }
 </style>
 <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
-<div id="SamplePlayerDivID2"></div>
+<div id="SamplePlayerDivID1"></div>
 <script type="text/javascript">
   //var w = window.innerWidth;
   //var h = window.innerHeight;
@@ -13,7 +13,7 @@
 	layout: "video",
     width: "100%",
     height: "100%",
-    channel: "epicdemostream",
+    channel: "wfan",
 	volume: "1.0",
     // only needed if your site is also embedded on embed.example.com and othersite.example.com 
     parent: ["ctrestain.github.io"]
@@ -25,5 +25,11 @@
   }
   function muteVid(mute){
 	player2.setMuted(mute);
+  }
+  function playVideo(){
+	player2.play();
+  }
+  function pauseVideo(){
+	player2.pause();
   }
 </script>
