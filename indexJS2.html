@@ -19,7 +19,11 @@
     parent: ["ctrestain.github.io"]
   };
   var player2 = new Twitch.Embed("SamplePlayerDivID2", options);
+  player2.addEventListener(Twitch.Player.READY, vidReady);
   player2.setVolume(1.0);
+  function vidReady(){
+	alert('vid ready');
+  }
   function volChange(v){
 	player2.setVolume(v);
   }
