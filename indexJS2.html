@@ -13,16 +13,20 @@
 	layout: "video",
     width: "100%",
     height: "100%",
-    channel: "wfan",
+    channel: "SoundCloud",
 	volume: "1.0",
     // only needed if your site is also embedded on embed.example.com and othersite.example.com 
     parent: ["ctrestain.github.io"]
   };
   var player2 = new Twitch.Embed("SamplePlayerDivID2", options);
   player2.addEventListener(Twitch.Player.READY, vidReady);
+  player2.addEventListener(Twitch.Player.PLAYING, vidPlaying);
   player2.setVolume(1.0);
   function vidReady(){
 	window.vuplex.postMessage({ type: 'status', message: 'ready' });
+  }
+  function vidPlaying(){
+	window.vuplex.postMessage({ type: 'status', message: 'playing' });
   }
   function volChange(v){
 	player2.setVolume(v);
