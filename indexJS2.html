@@ -22,7 +22,7 @@
   player2.addEventListener(Twitch.Player.READY, vidReady);
   player2.setVolume(1.0);
   function vidReady(){
-	alert('vid ready');
+	window.vuplex.postMessage({ type: 'status', message: 'ready' });
   }
   function volChange(v){
 	player2.setVolume(v);
