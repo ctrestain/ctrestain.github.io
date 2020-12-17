@@ -1,5 +1,6 @@
 importScripts('socket.io.js');
 
+
 var socket = io('ws://virtualconcertserver.herokuapp.com:80/socket.io/?EIO=4&transport=websocket');
 
 var connections = 0;
